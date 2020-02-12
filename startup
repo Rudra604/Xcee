@@ -156,3 +156,5 @@ namespace _24x7Store.Models
         public DbSet<Pie> Pies { get; set; }
     }
 }
+E.g:-
+"DataSource=10.210.23.212,1433;InitialCatalog=<DataDBname>;Trusted_Connection=True;MultipleActiveResultSets=True;"
