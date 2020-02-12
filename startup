@@ -162,3 +162,26 @@ E.g:-
 
 
 Server=(localdb)\\mssqllocaldb;Database=master;Trusted_Connection=True;
+
+
+
+
+List.cshtml
+@model PieListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+@foreach(var pie in Model.Pies)
+{
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+    <img src="pie.ImageThumbnailUrl" alt=" "/>
+    <div class="caption">
+        <h3><a>@pie.Name</a></h3>
+        <a asp-controller="Pie" asp-action="List">/ViewList</a>
+
+        <p>@pie.ShortDescription</p>
+        <p><img src="@pie.ImageUrl"></p>
+    </div>
+        </div>
+    </div>
+}
